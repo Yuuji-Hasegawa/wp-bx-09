@@ -1,0 +1,70 @@
+{
+  "site": {
+    "name": "BLUE B NOSE",
+    "keywords": [
+	    "blue b nose",
+      "ブルービーノーズ",
+      "ブルー・ビー・ノーズ",
+      "bbn",
+      "キーワード"
+    ],
+    "description": "あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。",
+    "gtm": "GTM-xxxxxx",
+    "copyright": "©︎ bbns.jp",
+    "theme": "#7fbce7"
+  },
+	"sns": {
+		"fb": "https://www.facebook.com",
+		"tw": "https://twitter.com",
+		"instagram": "https://www.instagram.com",
+		"twcreator": "bluebnose",
+		"twsite": "bluebnose",
+		"youtube": "https://youtube.com",
+    "gravatar": "https://gravatar.com"
+	},
+  "mail": {
+    "primary": "info@bbns.jp",
+    "sendonly": "noreply@bbns.jp"
+  },
+  "author": {
+    "name": "BLUE B NOSE",
+    "desc": "あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。",
+    "fb": "https://www.facebook.com",
+    "tw": "https://twitter.com",
+    "instagram": "https://www.instagram.com",
+    "youtube": "https://youtube.com",
+    "linkedin": "https://www.linkedin.com",
+    "gravatar": "https://gravatar.com",
+    "url": "https://bbns.jp"
+  },
+	"company": {
+		"name": "BLUE B NOSE",
+		"owner": "サンプル太郎",
+		"zip": "530-0011",
+		"address": "大阪府大阪市北区大深町3-1 グランフロント大阪",
+		"url": "https://bbns.jp/",
+    "tel": "000-0000-0000",
+		"fax": "000-0000-0000",
+		"birth": "20YY年MM月dd日",
+		"open": "09:00",
+		"close": "19:00",
+    "workday": "平日",
+		"dayoff": "土日祝・年末年始",
+		"service": [
+			"事業項目1",
+			"事業項目2",
+			"事業項目3",
+			"事業項目4",
+			"事業項目5",
+			"事業項目6"
+		]
+	},
+	"term": {
+    "company": "BLUE B NOSE",
+		"domain": "bbns.jp",
+		"name": "BLUE B NOSE",
+		"acount": "サンプル太郎",
+		"payterm": "12ヶ月間",
+		"court": "大阪地方裁判所"
+	}
+}

@@ -1,0 +1,14 @@
+.DS_Store
+.htaccess
+index.php
+license.txt
+readme.html
+wp-*.php
+xmlrpc.php
+wp-admin/*
+wp-content/*
+wp-includes/*
+!wp-content/themes
+wp-content/themes/*
+!wp-content/themes/bx-00/
+!wp-content/themes/bx-00/**/*
