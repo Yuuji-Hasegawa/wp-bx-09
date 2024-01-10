@@ -46,10 +46,10 @@ if (have_posts()):?>
     </div>
     <h3 class="c-sec-heading">本件に関するお問い合わせ先</h3>
     <div class="c-content-l">
-      <span class="u-logo-font">BLUE B NOSE</span><span class="u-text-weight-b">運営窓口</span><br />
+      <span class="u-font-logo">BLUE B NOSE</span><span class="u-text-weight-b">運営窓口</span><br />
       〒<span
         class="u-font-en-con"><?php echo get_vars('company', 'zip');?></span>
-      <?php echo get_vars('company', 'address');?>（<?php echo get_vars('company', 'name');?>）<br />
+      <?php echo get_vars('company', 'address');?><br />
       メール:<a class="c-text-link c-text-link--underline"
         href="mailto:<?php echo get_vars('mail', 'primary');?>"
         target="_blank" rel="noopener"><span
