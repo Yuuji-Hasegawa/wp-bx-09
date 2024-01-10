@@ -18,7 +18,7 @@ function my_script_styles()
     wp_register_style('themeCss', false);
     wp_enqueue_style('themeCss');
     $css = file_get_contents(get_template_directory_uri() . '/css/style.css', true);
-    $css = str_replace('url(/fonts', 'url(' . get_template_directory_uri() .'/fonts', $css);
+    $css = str_replace('url(../fonts', 'url(' . get_template_directory_uri() .'/fonts', $css);
     wp_add_inline_style('themeCss', $css);
     if (!is_admin()) {
         wp_deregister_script('jquery');
