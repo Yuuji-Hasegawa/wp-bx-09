@@ -14,14 +14,12 @@
 3. プロジェクトのディレクトリに移動し、`wp core download --locale=ja` コマンドを実行して WordPress をダウンロードする。MAMP 等を立ち上げ、当該ディレクトリにアクセスの上、WordPress をインストールしてください。WP-CLI で操作する場合、`Database hostname`に注意してください
 4. 使用するテーマを bx-00 に変更し、パーマリンクを変更してください
 5. Contact Form7 等のプラグインをインストール、有効化
-6. 固定ページや投稿を、`wp post generate`[wp post generate](https://developer.wordpress.org/cli/commands/post/generate/)で生成し、既存ページの slug 等を変更してください
+6. 固定ページや投稿を、`wp post generate` [wp post generate](https://developer.wordpress.org/cli/commands/post/generate/)で生成し、既存ページの slug 等を変更してください
 7. 各種設定は必要に応じて編集してください
 
 ## wp-cli のインストール方法
 
 https://wp-cli.org/ja/
-
-（や辺りは特に）
 
 ## 想定プラグイン
 
@@ -37,7 +35,7 @@ https://wp-cli.org/ja/
 10. XML Sitemap Generator for Google
 11. zipaddr-jp
 
-`wp plugin install akismet contact-form-7 contact-form-7-honeypot edit-author-slug ewww-image-optimizer google-sitemap-generator wp-multibyte-patch advanced-custom-fields flamingo wp-mail-smtp zipaddr-jp`
+`wp plugin install akismet contact-form-7 contact-form-7-honeypot edit-author-slug ewww-image-optimizer google-sitemap-generator wp-multibyte-patch advanced-custom-fields flamingo wp-mail-smtp zipaddr-jp`で重複はスキップしつつ、一気にインストールできます
 
 ## 主要な変更箇所（想定）
 
