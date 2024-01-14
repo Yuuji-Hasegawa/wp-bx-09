@@ -1,6 +1,6 @@
 const CACHE_NAME = 'bbns-2024-01-01';
-const OFFLINE_URL = 'https://demo.bbns.jp/bx-00/';
-const urlsToCache = ['https://demo.bbns.jp/bx-00/'];
+const OFFLINE_URL = 'https://demo.bbns.jp/bx-09/';
+const urlsToCache = ['https://demo.bbns.jp/bx-09/'];
 const neverCacheUrls = /\/wp-admin|\/wp-login|preview=true|\/cart|ajax|login/;
 
 self.addEventListener('install', (event) => {

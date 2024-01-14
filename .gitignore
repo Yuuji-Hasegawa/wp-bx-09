@@ -10,5 +10,5 @@ wp-content/*
 wp-includes/*
 !wp-content/themes
 wp-content/themes/*
-!wp-content/themes/bx-00/
-!wp-content/themes/bx-00/**/*
+!wp-content/themes/bx-09/
+!wp-content/themes/bx-09/**/*
