@@ -36,11 +36,31 @@ function create_post_type()
           'supports' => array('title','editor')
         )
     );
+    register_post_type(
+        'service',
+        array(
+      'labels' => array(
+          'name' => 'サービス',
+          'singular_name' => 'サービス',
+          'add_new_item' => 'サービスの新規追加',
+          'edit_item' => 'サービスの編集'
+      ),
+      'hierarchical' => false,
+      'public' => true,
+      'menu_position' => 10,
+      'has_archive' => true,
+      'menu_icon'   => 'dashicons-cart',
+      'rewrite' => array('with_front' => false),
+      'supports' => array('title','editor','thumb')
+      )
+    );
 }
 function custom_post_type_link($link, $post)
 {
     if ($post->post_type === 'news') {
         return home_url('/news/' . $post->ID . '/');
+    } elseif ($post->post_type === 'service') {
+        return home_url('/service/' . $post->ID);
     } else {
         return $link;
     }
@@ -54,6 +74,14 @@ function news_rewrite_rules_array($rules)
     return $new_rewrite_rules + $rules;
 }
 add_filter('rewrite_rules_array', 'news_rewrite_rules_array');
+function service_rewrite_rules_array($rules)
+{
+    $service_rewrite_rules = array(
+      'service/([0-9]+)/?$' => 'index.php?post_type=service&p=$matches[1]',
+    );
+    return $service_rewrite_rules + $rules;
+}
+add_filter('rewrite_rules_array', 'service_rewrite_rules_array');
 function post_has_archive($args, $post_type)
 {
     if ('post' == $post_type) {
@@ -66,7 +94,7 @@ add_filter('register_post_type_args', 'post_has_archive', 10, 2);
 
 function add_my_box()
 {
-    $addtype = array( 'post', 'page', 'news');
+    $addtype = array( 'post', 'page', 'news', 'service');
     add_meta_box('meta_info', 'SEO', 'meta_info_form', $addtype, 'side');
     add_meta_box('meta_blogs', '追加情報', 'meta_blogs_form', 'post', 'normal');
 }

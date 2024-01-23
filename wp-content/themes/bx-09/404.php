@@ -1,5 +1,21 @@
 <?php get_header();
 $protocol = empty($_SERVER["HTTPS"]) ? "http://" : "https://";?>
+<div class="c-puton c-puton--filter js-pull-view">
+  <picture class="o-frame o-frame--switch-l">
+    <source type="image/avif"
+      srcset="<?php echo get_template_directory_uri();?>/img/hero.avif" />
+    <source type="image/webp"
+      srcset="<?php echo get_template_directory_uri();?>/img/hero.webp" />
+    <img
+      src="<?php echo get_template_directory_uri();?>/img/hero.png"
+      width="100%" height="100%" decoding="async" fetchpriority="high" alt="" />
+  </picture>
+  <div class="c-puton__inner o-cover">
+    <div class="c-hero-copy o-cover__middle">
+      <span class="c-display-l u-text-weight-b u-font-en-con">NOT FOUND.</span>
+    </div>
+  </div>
+</div>
 <div class="o-box o-box--transparent o-center u-bg-qua u-pb-2xl">
   <h1 class="c-heading u-text-weight-b">お探しのページは見つかりませんでした。</h1>
   <p class="c-content-l">
@@ -10,7 +26,7 @@ $protocol = empty($_SERVER["HTTPS"]) ? "http://" : "https://";?>
     正しいアドレスを入力しても表示されない場合は、一時的にアクセスできない状況にあるか、移動もしくは削除された可能性があります。<br />その場合お手数ですがトップページからお求めのページを再度お探しください。
   </p>
   <a href="<?php echo home_url('/');?>"
-    class="o-box o-box--button o-box--rect-button u-mt-l">
+    class="o-box o-box--button o-box--rect-button u-mt-l js-fade-up">
     <span class="o-icon-parent">
       <svg class="o-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
         <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc.-->

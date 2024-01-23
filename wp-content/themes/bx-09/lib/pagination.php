@@ -37,7 +37,7 @@ function get_pagination()
     $pages = str_replace('class="page-numbers current"', 'class="o-box o-box--button o-box--square-button u-font-en-con"', $pages);
 
     if (is_array($pages)) {
-        $output = '<nav class="o-center u-mt-xl" aria-label="Pagination">
+        $output = '<nav class="o-center u-mt-xl js-fade-up" aria-label="Pagination">
         <ol class="o-cluster o-cluster--center o-cluster--gap-s">';
         foreach ($pages as $page) {
             if ($page == null) {

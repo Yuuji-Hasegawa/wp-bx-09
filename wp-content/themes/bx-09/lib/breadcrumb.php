@@ -3,7 +3,7 @@
 function get_breadcrumb()
 {
     global $post;
-    $output = '<nav class="o-center u-mt-xl u-mb-xl" aria-label="Breadcrumb">
+    $output = '<nav class="o-center u-mt-xl u-mb-xl js-pull-view" aria-label="Breadcrumb">
     <ol class="o-reel o-reel--breadcrumb">
       <li class="c-breadcrumb-item">
         <a href="' . home_url('/') . '" class="o-icon-parent c-text-link c-content-l">
@@ -33,6 +33,10 @@ function get_breadcrumb()
         if (is_post_type_archive('news')) {
             $output .= '<li class="c-breadcrumb-item">
               <a href="' . esc_url(home_url('/news/')) . '" class="c-text-link c-content-l" aria-current="page">お知らせ</a>
+            </li>';
+        } elseif(is_post_type_archive('service')) {
+            $output .= '<li class="c-breadcrumb-item">
+              <a href="' . esc_url(home_url('/service/')) . '" class="c-text-link c-content-l" aria-current="page">業務案内</a>
             </li>';
         } elseif (is_category()) {
             $output .= '<li class="c-breadcrumb-item">
@@ -66,6 +70,13 @@ function get_breadcrumb()
         if ('news' == get_post_type()) {
             $output .= '<li class="c-breadcrumb-item">
               <a href="' . esc_url(home_url('/news/')) . '" class="c-text-link c-content-l">お知らせ</a>
+            </li>';
+            $output .= '<li class="c-breadcrumb-item">
+              <a href="' . esc_url(get_permalink($post->ID)) . '" class="c-text-link c-content-l" aria-current="page">' . get_the_title($post->ID) . '</a>
+            </li>';
+        } elseif('service' == get_post_type()) {
+            $output .= '<li class="c-breadcrumb-item">
+              <a href="' . esc_url(home_url('/service/')) . '" class="c-text-link c-content-l">業務案内</a>
             </li>';
             $output .= '<li class="c-breadcrumb-item">
               <a href="' . esc_url(get_permalink($post->ID)) . '" class="c-text-link c-content-l" aria-current="page">' . get_the_title($post->ID) . '</a>

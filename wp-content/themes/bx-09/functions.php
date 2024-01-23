@@ -22,7 +22,12 @@ function my_get_posts($query)
         $query->set('posts_per_page', 3);
         $query->set('no_found_rows', true);
     } elseif ($query->is_archive()) {
-        $query->set('posts_per_page', 12);
+        if (is_post_type_archive('service')) {
+            $query->set('posts_per_page', -1);
+            $query->set('no_found_rows', true);
+        } else {
+            $query->set('posts_per_page', 12);
+        }
     }
 }
 add_action('pre_get_posts', 'my_get_posts');

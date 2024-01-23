@@ -11,6 +11,8 @@ function set_my_title()
     } elseif(is_archive()) {
         if (is_post_type_archive('news')) {
             $my_title = 'お知らせ';
+        } elseif (is_post_type_archive('service')) {
+            $my_title = '業務案内';
         } elseif (is_category()) {
             $my_title = get_queried_object()->cat_name;
         } elseif (is_tag()) {
@@ -64,6 +66,8 @@ function get_my_canonical()
     } elseif (is_archive()) {
         if (is_post_type_archive('news')) {
             $canonical = esc_url(home_url('/news/'));
+        } elseif (is_post_type_archive('service')) {
+            $canonical = esc_url(home_url('/service/'));
         } elseif (is_category()) {
             $cat = get_queried_object();
             $canonical = esc_url(get_category_link($cat->term_id));

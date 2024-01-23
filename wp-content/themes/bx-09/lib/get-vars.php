@@ -54,13 +54,19 @@ function get_thumb()
 function get_author_id()
 {
     global $post;
-    if(!is_404()) {
-        $author_id = $post->post_author;
-        if($author_id === '0') {
-            $author_id = '1';
-        }
+    $author_id = '';
+    if(is_404()) {
+        $author_id = 0;
     } else {
-        $author_id = '0';
+        if($post->post_author) {
+            if($author_id === '0') {
+                $author_id = '1';
+            } else {
+                $author_id = $post->post_author;
+            }
+        } else {
+            $author_id = 0;
+        }
     }
     return $author_id;
 }

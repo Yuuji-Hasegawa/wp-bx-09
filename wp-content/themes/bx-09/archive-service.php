@@ -11,28 +11,26 @@
   </picture>
   <div class="c-puton__inner o-cover">
     <h1 class="c-hero-copy o-cover__middle">
-      <span class="c-display-l u-text-weight-b u-font-en-con">NEWS</span>
-      <span class="c-display-xs">お知らせ</span>
+      <span class="c-display-l u-text-weight-b u-font-en-con">SERVICE</span>
+      <span class="c-display-xs">業務案内</span>
     </h1>
   </div>
 </div>
-<div class="o-box o-box--transparent o-center u-bg-qua u-pt-2xl u-pb-2xl">
+<div class="o-box o-box--transparent o-center u-pt-2xl u-pb-2xl">
   <?php if (have_posts()):?>
-  <ul class="o-stack o-stack--m">
+  <ul class="o-grid o-grid--tri js-pull-view">
     <?php while (have_posts()): the_post();?>
-    <li class="o-sidebar js-fade-up">
-      <time class="c-content-l u-font-en-con u-text-weight-b"
-        datetime="<?php the_time('Y-m-d');?>"><?php the_time('Y.m.d');?></time>
-      <a class="o-sidebar__grow o-sidebar__grow--news c-content-l c-text-link u-text-weight-b"
-        href="<?php the_permalink();?>">
-        <?php the_title();?>
+    <li class="o-stack o-stack--l">
+      <a href="<?php the_permalink();?>" class="c-photo-link">
+        <?php echo get_thumb();?>
       </a>
+      <a class="o-box o-box--button o-box--rect-button o-box--primary-button u-font-en-con u-full-width u-text-left"
+        href="<?php the_permalink();?>"><?php the_title();?></a>
     </li>
     <?php endwhile;?>
   </ul>
   <?php else:?>
-  <p class="c-content-l js-fade-up">ニュースはまだありません。</p>
-  <?php endif;
-echo get_pagination();?>
+  <p class="c-content-l js-fade-up">サービスはまだありません。</p>
+  <?php endif;?>
 </div>
 <?php get_footer();?>

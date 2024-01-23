@@ -11,7 +11,7 @@
   </picture>
   <div class="c-puton__inner o-cover">
     <h1 class="c-hero-copy o-cover__middle">
-      <span class="c-display-l u-text-weight-b u-font-en-con">INQUIRY</span>
+      <span class="c-display-l u-text-weight-b u-font-en-con">REQUEST</span>
       <span class="c-display-xs"><?php the_title();?></span>
     </h1>
   </div>
@@ -24,7 +24,7 @@
   <?php endwhile;?>
   <?php endif;?>
   <ul class="o-stack o-stack--xs u-mt-l">
-    <li class="c-notes c-suppl-l">調査等のため、返信にお時間を頂くことがございます。予めご了承ください。</li>
+    <li class="c-notes c-suppl-l">折り返しのご連絡にお時間を頂くことがございます。予めご了承ください。</li>
     <li class="c-notes c-suppl-l">
       万が一、一週間経っても返信がない場合は大変お手数ですが、<a class="c-text-link c-text-link--underline"
         href="mailto:<?php echo get_vars('mail', 'primary');?>"

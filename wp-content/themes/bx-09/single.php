@@ -1,6 +1,23 @@
 <?php get_header();
 post_view_count();
 if (have_posts()):?>
+<div class="c-puton c-puton--filter js-pull-view">
+  <picture class="o-frame o-frame--switch-l">
+    <source type="image/avif"
+      srcset="<?php echo get_template_directory_uri();?>/img/hero.avif" />
+    <source type="image/webp"
+      srcset="<?php echo get_template_directory_uri();?>/img/hero.webp" />
+    <img
+      src="<?php echo get_template_directory_uri();?>/img/hero.png"
+      width="100%" height="100%" decoding="async" fetchpriority="high" alt="" />
+  </picture>
+  <div class="c-puton__inner o-cover">
+    <div class="c-hero-copy o-cover__middle">
+      <span class="c-display-l u-text-weight-b u-font-en-con">BLOG</span>
+      <span class="c-display-xs">ブログ</span>
+    </div>
+  </div>
+</div>
 <div class="o-box o-box--post o-center o-center--content u-bg-qua u-mt-2xl u-pb-2xl">
   <h1 class="c-heading"><?php the_title();?></h1>
   <div class="o-stack o-stack--l">
@@ -99,17 +116,9 @@ if (have_posts()):?>
   <?php echo get_related_loop();
     echo get_last_loop();
     echo get_popular_loop();?>
-  <div class="u-text-center u-mt-xl">
+  <div class="u-text-center u-mt-xl js-fade-up">
     <a href="<?php echo home_url('/blog/');?>"
-      class="o-box o-box--button o-box--rect-button o-icon-parent">
-      一覧を見る
-      <svg class="o-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
-        <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc.-->
-        <path
-          d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
-          fill="currentColor" />
-      </svg>
-    </a>
+      class="o-box o-box--button o-box--rect-button o-box--primary-button u-font-en-con"> MORE </a>
   </div>
 </div>
 <?php endif;

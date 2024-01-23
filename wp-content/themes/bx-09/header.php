@@ -33,10 +33,11 @@
   <noscript><iframe
       src="https://www.googletagmanager.com/ns.html?id=<?php echo get_vars('site', 'gtm');?>"
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <header class="o-center c-header u-bg-qua">
+  <header class="c-header u-bg-qua">
     <a href="<?php echo home_url('/');?>"
-      class="o-icon-parent o-icon-parent--center o-icon-parent--header-logo">
-      <svg class="o-icon" width="670" height="403" viewBox="0 0 670 403" fill="none" xmlns="http://www.w3.org/2000/svg">
+      class="o-icon-parent o-icon-parent--center o-icon-parent--gap-s c-logo-link">
+      <svg class="o-icon c-display-l" width="670" height="403" viewBox="0 0 670 403" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
         <path d="M586.221 268.039L502.504 402.075L418.733 268.039H586.221Z" fill="#69AEE0" />
         <path d="M334.996 402.075L418.744 268.029L502.492 402.075H334.996Z" fill="#70B1E1" />
         <path d="M418.723 268.039L334.996 402.075L251.246 268.039H418.723Z" fill="#92CAEF" />
@@ -53,30 +54,98 @@
         <path d="M167.497 134.035L251.245 0L334.993 134.045L167.497 134.035Z" fill="#73B2E2" />
         <path d="M251.225 0L167.498 134.035L83.749 0H251.225Z" fill="#65A5DA" />
       </svg>
-      <span class="c-logo-label c-logo-label--header u-font-logo u-flex-shrink-none">BLUE B NOSE</span>
+      <span class="c-display-m u-font-logo u-flex-shrink-none">BLUE B NOSE</span>
     </a>
-    <nav id="gnav" class="c-gnav" aria-hidden="false" tabindex="">
-      <ul class="o-cluster">
-        <li class="c-gnav-item"><a class="c-gnav-link c-content-l u-text-weight-b"
-            href="<?php echo home_url('/');?>">トップ</a>
+    <nav class="c-pc-nav u-pc-only u-ml-m">
+      <ul class="o-cluster o-cluster--gap-none u-height-full">
+        <li class="c-pc-item">
+          <a href="<?php echo home_url('/');?>"
+            class="o-stack c-pc-link u-full-width">
+            <span class="c-content-l u-text-weight-m">トップ</span>
+            <span class="c-content-m u-font-en-con u-text-primary u-text-weight-m">TOP</span>
+          </a>
         </li>
-        <li class="c-gnav-item"><a class="c-gnav-link c-content-l u-text-weight-b"
-            href="<?php echo home_url('/company/');?>">会社情報</a>
+        <li class="c-pc-item">
+          <a href="<?php echo home_url('/aboutus/');?>"
+            class="o-stack c-pc-link u-full-width">
+            <span class="c-content-l u-text-weight-m"><span class="u-font-logo">BLUE B NOSE</span>について</span>
+            <span class="c-content-m u-font-en-con u-text-primary u-text-weight-m">ABOUT US</span>
+          </a>
         </li>
-        <li class="c-gnav-item"><a class="c-gnav-link c-content-l u-text-weight-b"
-            href="<?php echo home_url('/blog/');?>">ブログ</a>
+        <li class="c-pc-item">
+          <a href="<?php echo home_url('/company/');?>"
+            class="o-stack c-pc-link u-full-width">
+            <span class="c-content-l u-text-weight-m">会社情報</span>
+            <span class="c-content-m u-font-en-con u-text-primary u-text-weight-m">COMPANY</span>
+          </a>
         </li>
-        <li class="c-gnav-item"><a class="c-gnav-link c-content-l u-text-weight-b"
-            href="<?php echo home_url('/news/');?>">お知らせ</a>
+        <li class="c-pc-item">
+          <a href="<?php echo home_url('/service/');?>"
+            class="o-stack c-pc-link u-full-width">
+            <span class="c-content-l u-text-weight-m">事業案内</span>
+            <span class="c-content-m u-font-en-con u-text-primary u-text-weight-m">SERVICE</span>
+          </a>
         </li>
-        <li class="c-gnav-item"><a class="c-gnav-link c-content-l u-text-weight-b"
-            href="<?php echo home_url('/inquiry/');?>">お問い合わせ</a>
+        <li class="c-pc-item">
+          <a href="<?php echo home_url('/inquiry/');?>"
+            class="o-stack c-pc-link u-full-width">
+            <span class="c-content-l u-text-weight-m">お問い合わせ</span>
+            <span class="c-content-m u-font-en-con u-text-primary u-text-weight-m">INQUIRY</span>
+          </a>
         </li>
       </ul>
     </nav>
-    <button type="button" class="o-box o-box--button o-box--square-button o-box--menu-btn u-pc-none u-block-right"
-      aria-label="menu open" aria-controls="gnav" aria-expanded="true">
+    <button type="button" class="o-box o-box--transparent o-box--menu-btn u-pc-none u-block-right"
+      aria-label="menu open" aria-controls="spMenu" aria-expanded="false">
       <span class="c-menu-bars"></span>
     </button>
   </header>
+  <div id="spMenu" class="o-stack c-sp-menu u-bg-qua" aria-hidden="true" tabindex="-1">
+    <div class="c-header u-bg-qua">
+      <button type="button" class="o-box o-box--transparent o-box--menu-btn u-block-right" aria-label="menu open"
+        aria-controls="spMenu" aria-expanded="false">
+        <span class="c-menu-bars"></span>
+      </button>
+    </div>
+    <nav class="o-center c-sp-nav u-pb-2xl">
+      <ul class="o-stack u-height-full">
+        <li class="c-sp-item">
+          <a class="o-stack c-sp-link u-full-width"
+            href="<?php echo home_url('/');?>">
+            <span class="c-content-l u-text-weight-m">トップ</span>
+            <span class="c-content-m u-font-en-con u-text-primary u-text-weight-m">TOP</span>
+          </a>
+        </li>
+        <li class="c-sp-item">
+          <a class="o-stack c-sp-link u-full-width"
+            href="<?php echo home_url('/aboutus/');?>">
+            <span class="c-content-l u-text-weight-m"><span class="u-font-logo">BLUE B NOSE</span>について</span>
+            <span class="c-content-m u-font-en-con u-text-primary u-text-weight-m">ABOUT US</span>
+          </a>
+        </li>
+        <li class="c-sp-item">
+          <a class="o-stack c-sp-link u-full-width"
+            href="<?php echo home_url('/company/');?>">
+            <span class="c-content-l u-text-weight-m">会社情報</span>
+            <span class="c-content-m u-font-en-con u-text-primary u-text-weight-m">COMPANY</span>
+          </a>
+        </li>
+        <li class="c-sp-item">
+          <a class="o-stack c-sp-link u-full-width"
+            href="<?php echo home_url('/service/');?>">
+            <span class="c-content-l u-text-weight-m">事業案内</span>
+            <span class="c-content-m u-font-en-con u-text-primary u-text-weight-m">SERVICE</span>
+          </a>
+        </li>
+        <li class="c-sp-item">
+          <a class="o-stack c-sp-link u-full-width"
+            href="<?php echo home_url('/inquiry/');?>">
+            <span class="c-content-l u-text-weight-m">お問い合わせ</span>
+            <span class="c-content-m u-font-en-con u-text-primary u-text-weight-m">INQUIRY</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="c-menu-bg"></div>
   <main>

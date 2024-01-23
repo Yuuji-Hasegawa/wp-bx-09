@@ -1,5 +1,5 @@
 <?php get_header();?>
-<div class="c-puton c-puton--filter">
+<div class="c-puton c-puton--filter js-pull-view">
   <picture class="o-frame o-frame--switch-l">
     <source type="image/avif"
       srcset="<?php echo get_template_directory_uri();?>/img/hero.avif" />
@@ -16,16 +16,29 @@
     </h1>
   </div>
 </div>
-<div class="o-box o-box--transparent u-bg-qua u-pb-2xl">
+<div class="o-box o-box--transparent u-bg-qua u-pt-2xl u-pb-2xl">
   <div class="o-center o-center--content">
-    <h2 class="c-sec-heading u-text-center u-text-weight-b u-font-en">Information</h2>
+    <h2 class="o-stack u-mb-l u-text-center js-fade-up">
+      <span class="c-display-m u-text-weight-b u-font-en-con">NEWS</span>
+      <span class="c-content-l u-text-weight-b">お知らせ</span>
+    </h2>
     <?php echo get_front_news();?>
   </div>
 </div>
-<div class="o-center u-pb-2xl">
-  <h2 class="c-sec-heading u-text-center u-text-weight-b u-font-en">What's New</h2>
+<div class="o-box o-box--transparent o-center u-bg-primary u-pt-2xl u-pb-2xl js-pull-view">
+  <h2 class="o-stack u-mb-l u-text-center js-fade-up">
+    <span class="c-display-m u-text-weight-b u-font-en-con">SERVICE</span>
+    <span class="c-content-l u-text-weight-b">事業案内</span>
+  </h2>
+  <?php echo get_front_service();?>
+</div>
+<div class="o-center u-pb-2xl u-pt-2xl">
+  <h2 class="o-stack u-mb-l u-text-center js-fade-up">
+    <span class="c-display-m u-text-weight-b u-font-en-con">WHAT'S NEW</span>
+    <span class="c-content-l u-text-weight-b">新着記事</span>
+  </h2>
   <?php if (have_posts()):?>
-  <ul class="o-grid o-grid--tri u-mb-xl">
+  <ul class="o-grid o-grid--tri u-mb-xl js-pull-view">
     <?php while (have_posts()): the_post();?>
     <li>
       <a href="<?php the_permalink();?>"
