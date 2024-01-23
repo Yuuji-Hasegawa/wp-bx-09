@@ -36,7 +36,7 @@
   <header class="c-header u-bg-qua">
     <a href="<?php echo home_url('/');?>"
       class="o-icon-parent o-icon-parent--center o-icon-parent--gap-s c-logo-link">
-      <svg class="o-icon c-display-l" width="670" height="403" viewBox="0 0 670 403" fill="none"
+      <svg class="o-icon c-display-m" width="670" height="403" viewBox="0 0 670 403" fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <path d="M586.221 268.039L502.504 402.075L418.733 268.039H586.221Z" fill="#69AEE0" />
         <path d="M334.996 402.075L418.744 268.029L502.492 402.075H334.996Z" fill="#70B1E1" />
@@ -54,7 +54,7 @@
         <path d="M167.497 134.035L251.245 0L334.993 134.045L167.497 134.035Z" fill="#73B2E2" />
         <path d="M251.225 0L167.498 134.035L83.749 0H251.225Z" fill="#65A5DA" />
       </svg>
-      <span class="c-display-m u-font-logo u-flex-shrink-none">BLUE B NOSE</span>
+      <span class="c-display-s u-font-logo u-flex-shrink-none">BLUE B NOSE</span>
     </a>
     <nav class="c-pc-nav u-pc-only u-ml-m">
       <ul class="o-cluster o-cluster--gap-none u-height-full">
